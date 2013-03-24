@@ -1,1 +1,7 @@
-Hello!
+.container#dashboard_search
+  = form_tag "dashboard/search", :method => "post" do
+    %fieldset
+      .controls
+        = text_field_tag "destination", nil, :placeholder => "Where do you want to go?", :class => "input-xlarge"
+      .controls
+        = submit_tag "Search Destination", :class => "btn"

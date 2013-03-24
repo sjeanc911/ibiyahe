@@ -1,0 +1,18 @@
+!!! 5
+!!!
+%html{:lang => "en"}
+  %head
+    %title iBiyahe loooo
+    = csrf_meta_tags
+    = render :partial => "/layouts/assets"
+
+  %body
+    #header
+      = image_tag "travel-icon.jpg"
+    #toolbar
+      = link_to "Login", "#", :class => "btn btn-link"
+      |
+      = link_to "Sign-up", "#", :class => "btn btn-link"
+
+    #main
+      = yield
