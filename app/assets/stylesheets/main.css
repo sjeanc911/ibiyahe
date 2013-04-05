@@ -1,2 +1,23 @@
 #header img {
   width: 250px; }
+
+#toolbar {
+  position: fixed;
+  top: 10px;
+  right: 100px; }
+
+#dashboard_search {
+  text-align: center;
+  margin-top: 100px; }
+
+form .form_actions {
+  text-align: center; }
+
+#login_form {
+  background: #c5fdff;
+  border: 1px solid #4ce6cd;
+  border-radius: 5px;
+  position: absolute;
+  right: 5px;
+  top: 50px;
+  padding: 10px; }

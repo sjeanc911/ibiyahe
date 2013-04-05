@@ -1,0 +1,16 @@
+= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+  %fieldset
+    .control-group
+      = f.label :email, :class => "control-label"
+      .controls
+        = f.email_field :email, :autofocus => true
+
+    .control-group
+      = f.label :password, :class => "control-label"
+      .control
+        = f.password_field :password
+
+    .control-group.form_actions
+      = f.submit "Log in", :class => "btn"
+
+= render "devise/shared/links"

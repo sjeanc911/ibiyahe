@@ -1,0 +1,14 @@
+#toolbar
+  - if user_signed_in?
+    %span.text-success
+      Hello #{current_user.email}
+    = link_to "Log-out", destroy_user_session_path, :method => :delete
+  - else
+    = link_to "Login", "#", :class => "btn btn-link", :id => "login-link"
+    |
+    = link_to "Sign-up", "#", :class => "btn btn-link", :id => "sign-up-link"
+
+#login_form{:style => "display : none;"}
+
+#sign_up_form{:style => "display : none;"}
+

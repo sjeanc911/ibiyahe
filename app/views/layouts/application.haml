@@ -3,7 +3,18 @@
 %html
   %head
     %title iBiyahe
+    = csrf_meta_tags
+    = render :partial => "/layouts/assets"
 
   %body
+    .notice{:style => "display: none;"}
+      = notice
+    .alert{:style => "display: none;"}
+      = alert
+
+    #header
+      = image_tag "travel-icon.jpg"
+    = render :partial => "/layouts/navigation_bar"
+
     #main
       = yield
