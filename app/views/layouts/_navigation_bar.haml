@@ -2,7 +2,13 @@
   - if user_signed_in?
     %span.text-success
       Hello #{current_user.email}
+
+    = link_to "Profile", profile_path
+    |
+    = link_to "Dashboard", root_path
+    |
     = link_to "Log-out", destroy_user_session_path, :method => :delete
+
   - else
     = link_to "Login", "#", :class => "btn btn-link", :id => "login-link"
     |

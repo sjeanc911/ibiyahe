@@ -1,0 +1,59 @@
+.container
+  %h4 Edit Profile
+
+  = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:method => :put, :class => "form-horizontal"}) do |f|
+    = devise_error_messages!
+    %fieldset
+      .control-group
+        = f.label :firstname, :class => "control-label"
+        .controls
+          = f.text_field :firstname, :autofocus => true, :class => "input-xlarge"
+
+      .control-group
+        = f.label :lastname, :class => "control-label"
+        .controls
+          = f.text_field :lastname, :class => "input-xlarge"
+
+      .control-group
+        = f.label :address, :class => "control-label"
+        .controls
+          = f.text_field :address, :class => "input-xlarge"
+
+      .control-group
+        = f.label :about_me, :class => "control-label"
+        .controls
+          = f.text_area :about_me, :autofocus => true, :rows => '5', :class => "input-xlarge"
+
+      %hr.bs-docs-separator
+
+      .control-group
+        = f.label :email, :class => "control-label"
+        .controls
+          = f.email_field :email, :class => "input-xlarge"
+
+      .control-group
+        = f.label :password, :class => "control-label"
+        .controls
+          = f.password_field :password, :autocomplete => "off", :class => "input-xlarge"
+          %em
+            (leave blank if you don't want to change it)
+
+      .control-group
+        = f.label :password_confirmation, :class => "control-label"
+        .controls
+          = f.password_field :password_confirmation, :class => "input-xlarge"
+
+      .control-group
+        = f.label :current_password, :class => "control-label"
+        .controls
+          = f.password_field :current_password, :class => "input-xlarge"
+          %em
+            (we need your current password to confirm your changes)
+
+      .control-group.form_actions
+        = f.submit "Update", :class => "btn"
+
+  %h5 Cancel my account
+  %p
+    Unhappy?
+    = link_to "Cancel my account", registration_path(resource_name), :data => {:confirm => "Are you sure?"}, :method => :delete, :class => "btn"

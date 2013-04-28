@@ -1,14 +1,46 @@
-#header img {
-  width: 250px; }
+#banner {
+  float: left; }
+  #banner img {
+    width: 90px; }
 
 #toolbar {
-  position: fixed;
-  top: 10px;
-  right: 100px; }
+  float: right;
+  margin-top: 20px; }
 
 #dashboard_search {
   text-align: center;
   margin-top: 100px; }
+
+#footer {
+  text-align: center;
+  padding: 50px 0; }
+
+.profile_picture img {
+  width: 300px; }
+
+.profile_description {
+  margin-top: 20px;
+  font-size: 20px; }
+  .profile_description .user_badge {
+    color: red; }
+    .profile_description .user_badge .user_badge_label {
+      color: blue; }
+    .profile_description .user_badge .user_badge_img {
+      width: 100px;
+      height: 100px;
+      display: inline-block;
+      background-image: url("badges4.jpg"); }
+    .profile_description .user_badge .user_badge_img.jetsetter {
+      background-position: 0px 0px; }
+
+.create_itinerary {
+  float: right; }
+
+#header {
+  border-bottom: 1px solid #eeeeee; }
+
+#main {
+  margin-top: 30px; }
 
 form .form_actions {
   text-align: center; }

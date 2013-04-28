@@ -11,9 +11,14 @@
     .alert{:style => "display: none;"}
       = alert
 
-    #header
-      = image_tag "travel-icon.jpg"
-    = render :partial => "/layouts/navigation_bar"
+    #header.container
+      #banner
+        = image_tag "travel-icon.jpg"
+      = render :partial => "/layouts/navigation_bar"
 
     #main
-      = yield
+      .container
+        = yield
+
+    #footer
+      Copyright 2013

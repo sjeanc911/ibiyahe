@@ -1,0 +1,37 @@
+.profile_picture
+  = image_tag "traveller.jpg"
+
+.profile_description
+  .nickname
+    = current_user.nickname
+  .user_badge
+    %i.user_badge_img.jetsetter
+    %span.user_badge_label
+      = current_user.badge
+
+%hr.bs-docs-separator
+
+.profile_info
+  .email
+    %i.icon-envelope
+    = current_user.email
+
+  .description
+    %i.icon-comment
+    = current_user.about_me
+
+  .address
+    %i.icon-map-marker
+    = current_user.address
+
+  .website
+    %i.icon-home
+    www.mywebsite.com
+
+  .joined_on
+    %i.icon-time
+    = current_user.created_at
+
+%hr.bs-docs-separator
+
+= link_to "Edit Profile",  edit_user_registration_path, :class => "btn"
