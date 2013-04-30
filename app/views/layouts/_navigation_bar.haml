@@ -1,20 +1,30 @@
-#toolbar
-  - if user_signed_in?
+#toolbar.navbar
+  .navbar-inner
+    %ul.nav
+      - if user_signed_in?
+        %li{:class => get_active_page(params, 'profiles')}
+          = link_to "Profile", profile_path
+        %li{:class => "divider-vertical"}
+        %li{:class => get_active_page(params, 'dashboard')}
+          = link_to "Dashboard", root_path
+        %li{:class => "divider-vertical"}
+        %li
+          = link_to "Log-out", destroy_user_session_path, :method => :delete
+
+      - else
+        %li
+          = link_to "Login", "#", :class => "btn btn-link", :id => "login-link"
+        %li{:class => "divider-vertical"}
+        %li
+          = link_to "Sign-up", "#", :class => "btn btn-link", :id => "sign-up-link"
+
+- if user_signed_in?
+  .greetings
     %span.text-success
       Hello #{current_user.email}
+- else
+  #login_form{:style => "display : none;"}
 
-    = link_to "Profile", profile_path
-    |
-    = link_to "Dashboard", root_path
-    |
-    = link_to "Log-out", destroy_user_session_path, :method => :delete
+  #sign_up_form{:style => "display : none;"}
 
-  - else
-    = link_to "Login", "#", :class => "btn btn-link", :id => "login-link"
-    |
-    = link_to "Sign-up", "#", :class => "btn btn-link", :id => "sign-up-link"
-
-#login_form{:style => "display : none;"}
-
-#sign_up_form{:style => "display : none;"}
 

@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20130406135711) do
     t.string   "lastname"
     t.string   "address"
     t.string   "about_me"
+    t.string   "personal_website"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

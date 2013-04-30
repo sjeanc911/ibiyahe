@@ -2,6 +2,6 @@
   = form_tag "dashboard/search", :method => "post" do
     %fieldset
       .controls
-        = text_field_tag "destination", nil, :placeholder => "Where do you want to go?", :class => "input-xlarge"
+        = text_field_tag "destination", nil, :placeholder => "Where do you want to go?", :class => "input-xlarge", :autofocus => true
       .controls
         = submit_tag "Search Destination", :class => "btn"
